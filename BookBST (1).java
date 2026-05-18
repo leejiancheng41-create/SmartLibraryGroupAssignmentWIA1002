@@ -24,13 +24,23 @@ public class BookBST {
     public void insert(long isbn, String title, String author) {
         this.root = insertBook(this.root, isbn, title, author);
     }
-     // private skeleton method to search for a book in the BST (for Record finder)
-    private Book searchBook(long isbn){
-        return null;
+    // private recursive method to search for a book in the BST (for Record finder)
+private Book searchBook(Book node, long isbn) {
+    // Base case: not found
+    if (node == null) return null;
+    
+    // Base case: found it
+    if (node.getIsbn() == isbn) return node;
+    
+    // Recursive case: go left or right
+    if (isbn < node.getIsbn()) {
+        return searchBook(node.left, isbn);
+    } else {
+        return searchBook(node.right, isbn);
     }
-     // public skeleton method to search for a book in the BST (for Record finder)
-    public Book search(long isbn) {
-        return null;
-    }
-    }
+}
 
+// public method to search for a book in the BST (for Record finder)
+public Book search(long isbn) {
+    return searchBook(this.root, isbn);
+}
