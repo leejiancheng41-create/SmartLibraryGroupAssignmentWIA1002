@@ -1,7 +1,10 @@
  // a BST class to store books 
 public class BookBST {
 
-    private Book root; // the root node of the BST
+    private Book root;
+    public Book getRoot(){
+     return this.root;
+    }// the root node of the BST
 
     // private method to insert a book into the BST
     private  Book insertBook(Book root, long isbn, String title, String author) {
