@@ -1,6 +1,7 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
-public class SmartLibrary{
+public class SmartLibrary {
 
     private LibraryADT library;
     private Scanner scanner;
@@ -9,9 +10,9 @@ public class SmartLibrary{
         // need interface implemented by other
         // TODO
         // this.library = new SmartLibrarySystem();
+        this.library = new SmartLibrarySystem();
         this.scanner = new Scanner(System.in);
     }
-
 
     public void runMenu() {
         int choice;
@@ -20,12 +21,12 @@ public class SmartLibrary{
             printMenu();
             choice = readInt("Enter your choice: ");
 
-            switch (choice)
-            {
+            switch (choice) {
                 case 1 -> addBookInterface();
                 case 2 -> searchBookInterface();
                 case 3 -> borrowBookInterface();
-                case 4 -> System.out.println("Thank you for using Smart Library System.");
+                case 4 -> viewHistoryInterface(); // Fixed: Now correctly calls the history screen
+                case 5 -> System.out.println("Thank you for using Smart Library System."); // Fixed: Set to 5 to match exit routine
                 default -> System.out.println("Invalid choice. Please enter a number from 1 to 5.");
             }
             System.out.println();
@@ -64,7 +65,6 @@ public class SmartLibrary{
         } else {
             System.out.println("Error: A book with this ISBN already exists.");
         }
-
     }
 
     //search book
@@ -94,7 +94,6 @@ public class SmartLibrary{
             System.out.println("Borrow failed. Book not found in catalogue.");
         }
     }
-
 
     //display book
     private void displayBook(Book book) {
@@ -145,8 +144,7 @@ public class SmartLibrary{
         }
     }
 
-    private void viewHistoryInterface()
-    {
+    private void viewHistoryInterface() {
         System.out.println("\n--- Borrow History ---");
         System.out.println(library.viewLatestHistory());
     }
