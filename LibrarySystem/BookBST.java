@@ -1,4 +1,4 @@
-// a BST class to store books
+package LibrarySystem;// a BST class to store books
 // Original base: insert + recursive search by ISBN.
 // Added: remove + traversal helpers for CSV saving and status display.
 
@@ -21,7 +21,7 @@ public class BookBST {
         } else if (book.getIsbn() > root.getIsbn()) {
             root.right = insertBook(root.right, book);
         } else {
-            System.out.println("Error: Book with ISBN " + book.getIsbn() + " already exists in the catalogue.");
+            System.out.println("Error: LibrarySystem.Book with ISBN " + book.getIsbn() + " already exists in the catalogue.");
         }
         return root;
     }

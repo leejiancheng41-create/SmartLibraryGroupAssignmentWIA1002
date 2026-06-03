@@ -1,3 +1,5 @@
+package LibrarySystem;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -49,7 +51,7 @@ public class SmartLibrary {
     }
 
     private void librarianLoginInterface() {
-        System.out.println("\n--- Librarian Login ---");
+        System.out.println("\n--- Librarian Login ---(For testing purposes, username: admin, password :1234)");
         String username = readNonEmptyString("Username: ");
         String password = readNonEmptyString("Password: ");
 
@@ -192,7 +194,7 @@ public class SmartLibrary {
     }
 
     private void borrowBookInterface() {
-        System.out.println("\n--- Borrow Book ---");
+        System.out.println("\n--- BorrowBook ---");
 
         long isbn = readLong("Enter ISBN to borrow: ");
         boolean isBorrowed = library.borrowBook(isbn, currentStudentMatric);

@@ -1,4 +1,4 @@
-// ADT interface for the Smart Library System.
+package LibrarySystem;// ADT interface for the Smart Library System.
 // Users interact through these methods without knowing the internal BST/Stack/CSV logic.
 
 public interface LibraryADT {

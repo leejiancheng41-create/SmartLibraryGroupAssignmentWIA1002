@@ -1,5 +1,5 @@
-// Stack for borrowing history. Most recent borrowed/returned activity is shown first.
-// Original base used a linked stack. This version keeps that logic and stores HistoryRecord.
+package LibrarySystem;// Stack for borrowing history. Most recent borrowed/returned activity is shown first.
+// Original base used a linked stack. This version keeps that logic and stores LibrarySystem.HistoryRecord.
 
 public class BorrowStack {
     private static class StackNode {
