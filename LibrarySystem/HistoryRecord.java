@@ -1,5 +1,5 @@
-// Represents one student library activity record stored in borrow_history.csv.
-// The BorrowStack stores this record so history can be displayed in LIFO order.
+package LibrarySystem;// Represents one student library activity record stored in borrow_history.csv.
+// The LibrarySystem.BorrowStack stores this record so history can be displayed in LIFO order.
 
 public class HistoryRecord {
     private String matricNumber;

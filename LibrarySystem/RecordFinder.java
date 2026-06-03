@@ -1,6 +1,6 @@
-// ============================================================
+package LibrarySystem;// ============================================================
 // Record Finder: Recursive ISBN Search & Duplicate Checker
-// This class wraps the BookBST to provide detailed search output
+// This class wraps the LibrarySystem.BookBST to provide detailed search output
 // and duplicate detection logic.
 // ============================================================
 
@@ -8,20 +8,20 @@ public class RecordFinder {
 
     private BookBST catalogue;
 
-    // Constructor takes the shared BookBST catalogue
+    // Constructor takes the shared LibrarySystem.BookBST catalogue
     public RecordFinder(BookBST catalogue) {
         this.catalogue = catalogue;
     }
 
     // FEATURE 1: Search by ISBN with full details printed
-    // Uses the recursive search inside BookBST
+    // Uses the recursive search inside LibrarySystem.BookBST
     // Time complexity: O(log n) for a balanced BST
     public void searchByIsbn(long isbn) {
         System.out.println("\n[SEARCH] Looking for ISBN: " + isbn + "...");
         Book result = catalogue.search(isbn);
 
         if (result != null) {
-            System.out.println("  Book Found!");
+            System.out.println("  LibrarySystem.Book Found!");
             System.out.println("  ISBN   : " + result.getIsbn());
             System.out.println("  Title  : " + result.getTitle());
             System.out.println("  Author : " + result.getAuthor());

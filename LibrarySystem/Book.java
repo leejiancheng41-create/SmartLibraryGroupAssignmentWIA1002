@@ -1,4 +1,4 @@
-// a class called Book to represent each book with its title, author, isbn
+package LibrarySystem;// a class called LibrarySystem.Book to represent each book with its title, author, isbn
 // Added fields: borrowed status and borrowedBy matric number for CSV record tracking.
 
 public class Book {
