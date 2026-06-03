@@ -1,10 +1,4 @@
-/**
- * Main entry point for Smart Library System.
- * Compile together with:
- * Book.java
- * BookBST.java
- * SmartLibrary.java
- */
+// Main entry point for Smart Library System.
 public class Main {
     public static void main(String[] args) {
         SmartLibrary library = new SmartLibrary();
